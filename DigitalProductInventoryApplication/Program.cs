@@ -72,7 +72,7 @@ namespace DigitalProductInventoryApplication
 
 
         }
-        public static IEnumerable<ProductViewModel> GetProducts(List<ProductBase> products, List<CategoryBase> categories)
+        private static IEnumerable<ProductViewModel> GetProducts(List<ProductBase> products, List<CategoryBase> categories)
         {
 
             return from p in products
@@ -87,14 +87,14 @@ namespace DigitalProductInventoryApplication
 
         }
 
-        public static void AddPropertiesToCategory(CategoryBase category, int id, string title, string description)
+        private static void AddPropertiesToCategory(CategoryBase category, int id, string title, string description)
         {
             category.Id = id;
             category.Title = title;
             category.Description = description;
         }
 
-        public static void AddPropertiesToProduct(ProductBase product, int id, string title, int categoryId)
+        private static void AddPropertiesToProduct(ProductBase product, int id, string title, int categoryId)
         {
             product.Id = id;
             product.Title = title;
